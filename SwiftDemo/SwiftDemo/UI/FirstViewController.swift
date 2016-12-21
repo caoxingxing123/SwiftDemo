@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class FirstViewController: UIViewController,UITableViewDelegate,UITableViewDataSource{
+class FirstViewController: BaseViewController,UITableViewDelegate,UITableViewDataSource{
     
     @IBOutlet var tableView :UITableView!
     var dataSource:Array<Any>?
