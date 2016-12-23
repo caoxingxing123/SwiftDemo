@@ -90,15 +90,18 @@
 		1D585FC61E00DC5F0066C47D /* ThirdViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D585FBB1E00DC5E0066C47D /* ThirdViewController.xib */; };
 		1D585FC71E00DC5F0066C47D /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D585FBD1E00DC5E0066C47D /* CustomCell.swift */; };
 		1D585FC81E00DC5F0066C47D /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D585FBE1E00DC5E0066C47D /* CustomCell.xib */; };
-		1D585FFA1E00DD090066C47D /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D585FED1E00DC9A0066C47D /* SQLite.framework */; };
 		1D585FFC1E01195B0066C47D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D585FFB1E01195B0066C47D /* libsqlite3.0.tbd */; };
 		1D585FFE1E01196C0066C47D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D585FFD1E01196C0066C47D /* libsqlite3.tbd */; };
 		1D7BB2221DFFCB7100700E1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BB2211DFFCB7100700E1C /* NetworkManager.swift */; };
 		1D95FDCF1E090B040013E001 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95FDCE1E090B040013E001 /* Constant.swift */; };
 		1D95FDD21E090B820013E001 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95FDD11E090B820013E001 /* BaseViewController.swift */; };
 		1DBC72C81E0179B500E8173E /* TT_Project_Members.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DBC72C71E0179B500E8173E /* TT_Project_Members.swift */; };
+		1DC0374C1E0B75370051E035 /* JXMovableCellTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC0374B1E0B75370051E035 /* JXMovableCellTableView.m */; };
+		1DC0375D1E0BDE940051E035 /* SQLite.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 1D585FED1E00DC9A0066C47D /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1DC0375E1E0BDFB00051E035 /* Alamofire.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = 1D585FD51E00DC8B0066C47D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1DFB8A181CB6787F003BD2AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFB8A171CB6787F003BD2AD /* AppDelegate.swift */; };
 		1DFB8A1F1CB6787F003BD2AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DFB8A1E1CB6787F003BD2AD /* Assets.xcassets */; };
+		1DFE1C2F1E0B620000F64621 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DFE1C2E1E0B620000F64621 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,6 +212,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				1DC0375E1E0BDFB00051E035 /* Alamofire.framework in Copy Files */,
+				1DC0375D1E0BDE940051E035 /* SQLite.framework in Copy Files */,
 			);
 			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,10 +315,14 @@
 		1D95FDCE1E090B040013E001 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		1D95FDD11E090B820013E001 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		1DBC72C71E0179B500E8173E /* TT_Project_Members.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TT_Project_Members.swift; sourceTree = "<group>"; };
+		1DC0374A1E0B75370051E035 /* JXMovableCellTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXMovableCellTableView.h; sourceTree = "<group>"; };
+		1DC0374B1E0B75370051E035 /* JXMovableCellTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JXMovableCellTableView.m; sourceTree = "<group>"; };
+		1DC0375C1E0B765F0051E035 /* Swift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swift-Bridging-Header.h"; sourceTree = "<group>"; };
 		1DFB8A141CB6787F003BD2AD /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DFB8A171CB6787F003BD2AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1DFB8A1E1CB6787F003BD2AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1DFB8A231CB6787F003BD2AD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1DFE1C2E1E0B620000F64621 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,7 +332,6 @@
 			files = (
 				1D585FFE1E01196C0066C47D /* libsqlite3.tbd in Frameworks */,
 				1D585FFC1E01195B0066C47D /* libsqlite3.0.tbd in Frameworks */,
-				1D585FFA1E00DD090066C47D /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +359,7 @@
 		1D2D40E41DFE832D00109DFF /* 3rd */ = {
 			isa = PBXGroup;
 			children = (
+				1DC037491E0B75370051E035 /* JXMovableCellTableView */,
 				1D3DDEF01E0A80100088C731 /* SwifterSwift */,
 				1D2D412B1DFE874400109DFF /* SnapKit */,
 			);
@@ -473,6 +482,7 @@
 				1D585FBA1E00DC5E0066C47D /* ThirdViewController.swift */,
 				1D585FBB1E00DC5E0066C47D /* ThirdViewController.xib */,
 				1D585FBC1E00DC5E0066C47D /* View */,
+				1DFE1C2E1E0B620000F64621 /* DetailViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -548,6 +558,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		1DC037491E0B75370051E035 /* JXMovableCellTableView */ = {
+			isa = PBXGroup;
+			children = (
+				1DC0374A1E0B75370051E035 /* JXMovableCellTableView.h */,
+				1DC0374B1E0B75370051E035 /* JXMovableCellTableView.m */,
+			);
+			path = JXMovableCellTableView;
+			sourceTree = "<group>";
+		};
 		1DFB8A0B1CB6787F003BD2AD = {
 			isa = PBXGroup;
 			children = (
@@ -578,6 +597,7 @@
 				1DFB8A171CB6787F003BD2AD /* AppDelegate.swift */,
 				1DFB8A1E1CB6787F003BD2AD /* Assets.xcassets */,
 				1DFB8A231CB6787F003BD2AD /* Info.plist */,
+				1DC0375C1E0B765F0051E035 /* Swift-Bridging-Header.h */,
 			);
 			path = SwiftDemo;
 			sourceTree = "<group>";
@@ -615,6 +635,7 @@
 				TargetAttributes = {
 					1DFB8A131CB6787F003BD2AD = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = FAT69R69RF;
 						LastSwiftMigration = 0810;
 					};
 				};
@@ -822,6 +843,7 @@
 				1D2D40B41DFE523F00109DFF /* Common.swift in Sources */,
 				1D2D41631DFE874400109DFF /* ConstraintOffsetTarget.swift in Sources */,
 				1D3DDF281E0A80100088C731 /* UIAlertControllerExtensions.swift in Sources */,
+				1DFE1C2F1E0B620000F64621 /* DetailViewController.swift in Sources */,
 				1D3DDF2E1E0A80100088C731 /* UIImageViewExtensions.swift in Sources */,
 				1D2D41531DFE874400109DFF /* ConstraintDSL.swift in Sources */,
 				1D3DDF231E0A80100088C731 /* SwifterSwift.swift in Sources */,
@@ -844,6 +866,7 @@
 				1D2D41591DFE874400109DFF /* ConstraintLayoutGuideDSL.swift in Sources */,
 				1D2D41571DFE874400109DFF /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				1D3DDF361E0A80100088C731 /* UISwitchExtensions.swift in Sources */,
+				1DC0374C1E0B75370051E035 /* JXMovableCellTableView.m in Sources */,
 				1D2D41541DFE874400109DFF /* ConstraintInsets.swift in Sources */,
 				1D3DDF1F1E0A80100088C731 /* DoubleExtensions.swift in Sources */,
 				1D3DDF291E0A80100088C731 /* UIBarButtonItemExtensions.swift in Sources */,
@@ -951,6 +974,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FAT69R69RF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftDemo/3rd",
@@ -960,6 +984,7 @@
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Dream.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/xxcao/Downloads/LearningSwift/SwiftDemo/SwiftDemo/Swift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -969,6 +994,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FAT69R69RF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SwiftDemo/3rd",
@@ -978,6 +1004,7 @@
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = Dream.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/xxcao/Downloads/LearningSwift/SwiftDemo/SwiftDemo/Swift-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

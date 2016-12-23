@@ -10,7 +10,6 @@ import UIKit
 import Alamofire
 
 class SecondViewController: BaseViewController {
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "第二页面";
@@ -30,6 +29,12 @@ class SecondViewController: BaseViewController {
     
     func doNotification(sender:AnyObject, sender2:AnyObject) {
         print("1111")
+    }
+    
+    @IBAction func ClickMeAction(_ sender: UIButton) {
+        let detailVC = DetailViewController()
+        detailVC.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(detailVC, animated: true)
     }
 }
 
