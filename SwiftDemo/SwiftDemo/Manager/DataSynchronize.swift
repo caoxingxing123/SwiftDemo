@@ -17,8 +17,7 @@ protocol DataSynchronizeProtocol {
 
 extension DataSynchronizeProtocol where Self : BaseViewController {
     func synchronize(DataBase dbData : Array<Any>, ServerData serData: Array<Any>) -> Bool {
-        print("protcol is called")
-
+        NSLog( "protcol is called")
         //first. caculate datas in database not in serverdata  -> set one
         //second. delete set one from DB
         //third. caculate datas in both database and serverdata -> set two

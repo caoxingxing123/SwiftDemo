@@ -92,6 +92,7 @@
 		1D585FC81E00DC5F0066C47D /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D585FBE1E00DC5E0066C47D /* CustomCell.xib */; };
 		1D585FFC1E01195B0066C47D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D585FFB1E01195B0066C47D /* libsqlite3.0.tbd */; };
 		1D585FFE1E01196C0066C47D /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D585FFD1E01196C0066C47D /* libsqlite3.tbd */; };
+		1D6939CF1E149EEB00F5E476 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D6939CE1E149EEB00F5E476 /* MainViewController.swift */; };
 		1D7BB2221DFFCB7100700E1C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D7BB2211DFFCB7100700E1C /* NetworkManager.swift */; };
 		1D95FDCF1E090B040013E001 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95FDCE1E090B040013E001 /* Constant.swift */; };
 		1D95FDD21E090B820013E001 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D95FDD11E090B820013E001 /* BaseViewController.swift */; };
@@ -311,6 +312,7 @@
 		1D585FE21E00DC9A0066C47D /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "SwiftDemo/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		1D585FFB1E01195B0066C47D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		1D585FFD1E01196C0066C47D /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		1D6939CE1E149EEB00F5E476 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1D7BB2211DFFCB7100700E1C /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		1D95FDCE1E090B040013E001 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		1D95FDD11E090B820013E001 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -471,6 +473,7 @@
 		1D585FB31E00DC5E0066C47D /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1D6939CD1E149EC400F5E476 /* Main */,
 				1D95FDD01E090B640013E001 /* Base */,
 				1DBC72B71E01799000E8173E /* Model */,
 				1D585FB41E00DC5E0066C47D /* FirstViewController.swift */,
@@ -522,6 +525,14 @@
 				1D585FF91E00DC9A0066C47D /* SQLite.framework */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		1D6939CD1E149EC400F5E476 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1D6939CE1E149EEB00F5E476 /* MainViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		1D7BB2201DFFCB4900700E1C /* Manager */ = {
@@ -855,6 +866,7 @@
 				1D2D415C1DFE874400109DFF /* ConstraintMaker.swift in Sources */,
 				1D3DDF331E0A80100088C731 /* UISearchBarExtensions.swift in Sources */,
 				1D2D41651DFE874400109DFF /* ConstraintRelatableTarget.swift in Sources */,
+				1D6939CF1E149EEB00F5E476 /* MainViewController.swift in Sources */,
 				1D95FDCF1E090B040013E001 /* Constant.swift in Sources */,
 				1D2D415D1DFE874400109DFF /* ConstraintMakerEditable.swift in Sources */,
 				1D2D416C1DFE874400109DFF /* LayoutConstraint.swift in Sources */,
@@ -974,6 +986,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = FAT69R69RF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -981,7 +994,7 @@
 				);
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_SWIFT_FLAGS = "";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = Dream.SwiftDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "/Users/xxcao/Downloads/LearningSwift/SwiftDemo/SwiftDemo/Swift-Bridging-Header.h";
@@ -994,6 +1007,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = FAT69R69RF;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

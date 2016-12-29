@@ -44,15 +44,14 @@ class ThirdViewController: BaseViewController {
         
         //3.
         let count = Dao.getFirstValueSQL(sqlString: "select count (*) from TT_Project_Members")
-        print("data count is : \(count)")
-        
+        NSLog( "data count is : \(count)")
         //4.
         let array = Dao.selectedValueSQL(sqlString: "select * from TT_Project_Members", modelClass: TABLE_TT_Project_Members)
         
         
         for i in 0 ..< (Int(count as! Int64)){
             let item = array[i] as! TT_Project_Members
-            print("array is :\n \(item.project_id) \n \(item.user_id) \n \(item.user_name) \n \(item.user_img_url) \n")
+            NSLog( "array is :\n \(item.project_id) \n \(item.user_id) \n \(item.user_name) \n \(item.user_img_url) \n")
         }
     }
 

@@ -18,9 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if (self.window == nil) {
             self.window = UIWindow(frame:UIScreen.main.bounds)
         }
-        let rootViewController = self.initTabbar()
-        self.window!.rootViewController = rootViewController
+        self.window!.rootViewController = MainViewController()
         self.window!.makeKeyAndVisible()
+        
+        NSLog("aaaaaaa")
         return true
     }
 
@@ -45,33 +46,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
+}
 
-    
-    func initTabbar() -> UIViewController {
-        let tabbarController:UITabBarController = UITabBarController()
-        let  firVC:FirstViewController  = FirstViewController();
-        let nav1:UINavigationController = UINavigationController(rootViewController: firVC)
-        let item1 : UITabBarItem = UITabBarItem (title: "第一页面", image: nil, selectedImage: nil)
-        nav1.tabBarItem = item1
-        
-        let  secVC:SecondViewController = SecondViewController();
-        let nav2:UINavigationController = UINavigationController(rootViewController: secVC)
-        let item2 : UITabBarItem = UITabBarItem (title: "第二页面", image: nil, selectedImage: nil)
-        nav2.tabBarItem = item2
-        
-        let  thdVC:ThirdViewController = ThirdViewController();
-        let nav3:UINavigationController = UINavigationController(rootViewController: thdVC)
-        let item3 : UITabBarItem = UITabBarItem (title: "第三页面", image: nil, selectedImage: nil)
-        nav3.tabBarItem = item3
-        
-        let  forthVC:ForthViewController = ForthViewController();
-        let nav4:UINavigationController = UINavigationController(rootViewController: forthVC)
-        let item4 : UITabBarItem = UITabBarItem (title: "第四页面", image: nil, selectedImage: nil)
-        item4.badgeValue = "new"
-        nav4.tabBarItem = item4
-        
-        tabbarController.viewControllers = [nav1,nav2,nav3,nav4];
-        return tabbarController;
-    }
+/**
+ 自定义打印log函数
+ */
+func NSLog <T> (_ message: T, fileName: String = #file, functionName: String = #function, lineNumber: Int = #line) {
+    #if DEBUG
+    let tmpFileName = (fileName as NSString).pathComponents.last?.replacingOccurrences(of: ".swift", with: "")
+    print("\(tmpFileName!).\(functionName).[\(lineNumber)]:\(message)")
+    #endif
 }
 

@@ -51,7 +51,7 @@ class Dao: NSObject {
     class func connectDataBase(dbName : String) -> Bool{
 //        if not exist create a data base
         let dbPath = LibCachePath + dbName
-        print("database path is : \(dbPath)")
+        NSLog( "database path is : \(dbPath)")
         CurrentDB = try? Connection(dbPath)
         
 //        If you maintain multiple connections for a single database, 
@@ -65,7 +65,9 @@ class Dao: NSObject {
         })
         
 #if DEBUG
-        CurrentDB.trace(print)
+        CurrentDB?.trace({ (string) in
+            NSLog( string)
+        })
 #endif
         return true
     }
@@ -75,7 +77,7 @@ class Dao: NSObject {
         do {
             try CurrentDB?.execute(sqlString)
         } catch {
-            print(error)
+            NSLog( error)
         }
     }
     //count sum max min
@@ -85,7 +87,7 @@ class Dao: NSObject {
         do {
             result = try CurrentDB?.scalar(sqlString)
         } catch {
-            print(error)
+            NSLog( error)
         }
         return result as Any
     }
@@ -105,7 +107,7 @@ class Dao: NSObject {
                 results.append(object)
             }
         } catch {
-            print(error)
+            NSLog( error)
         }
         return results
     }

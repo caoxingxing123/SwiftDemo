@@ -31,13 +31,13 @@ class ForthViewController: BaseViewController, DataSynchronizeProtocol {
 //        print("----->\(numbers2)")
         
         let numbers3 = strings.joined(separator: ",")
-        print("----->\(numbers3)")
+        NSLog( "----->\(numbers3)")
 
         let numbers4 = strings.map({$0 + "sb"})
-        print("----->\(numbers4)")
+        NSLog( "----->\(numbers4)")
 
         let numbers5 = strings.filter({Int($0)! > 15})
-        print("----->\(numbers5)")
+        NSLog( "----->\(numbers5)")
 
         
         let nums = [11, 12,23, 14, 25, 46, 17]
@@ -47,20 +47,20 @@ class ForthViewController: BaseViewController, DataSynchronizeProtocol {
         _ = nums.reduce(0) { (result, num) -> Int in
            return result + num
         }
-        print("----->\(numbers6)")
+        NSLog( "----->\(numbers6)")
 
         let emojis = String(repeatElement("🐤", count: 5))
-        print("----->\(emojis)")
+        NSLog( "----->\(emojis)")
 
         let emojis2 = repeatElement("🐥", count: 20)
-        print("----->\(emojis2)")
+        NSLog( "----->\(emojis2)")
 
         let numbers7 = nums.sorted(by: {$0 > $1})
-        print("----->\(numbers7)")
+        NSLog( "----->\(numbers7)")
         
         //protocol test
         let isSynchronize = synchronize(DataBase: [], ServerData: [])
-        print("\(isSynchronize)")
+        NSLog( "\(isSynchronize)")
         
         
         //Generics
@@ -75,36 +75,35 @@ class ForthViewController: BaseViewController, DataSynchronizeProtocol {
         var useColor: String?
         useColor = "red"
         let count = useColor?.utf8.count
-        print("count is :\(count)")
+        NSLog( "count is :\(count)")
         let resultColor = useColor ?? "blue"
-        print(resultColor)
+        NSLog( resultColor)
         
-        print("1:\(10.advanced(by: 5)), 2:\(5.distance(to: 15))")
-        
+        NSLog( "1:\(10.advanced(by: 5)), 2:\(5.distance(to: 15))")
 //        fatalError("hello,bug")
         
+        //测试print
         print("test string is:","hello","world",separator:"|",terminator:"->")
         print("Woo", "Hey", "Haha")
         
-        
         var values = ["LiLei","HanMeimei","Tom","Jim","John","Jack"][1 ... 3]
         values.sort()
-        print("sort1 result is:\(values)")
+        NSLog( "sort1 result is:\(values)")
         values.sort { (str1, str2) -> Bool in
            return str1 > str2
         }
         values.sort(by: >)
-        print("sort2 result is:\(values)")
+        NSLog( "sort2 result is:\(values)")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("view begin")
+        NSLog( "view begin")
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        print("view end")
+        NSLog( "view end")
     }
     
     override func didReceiveMemoryWarning() {
@@ -119,7 +118,7 @@ class ForthViewController: BaseViewController, DataSynchronizeProtocol {
  */
     func printElementFromArray <T> (array : [T]) {
         for element in array {
-            print(element)
+            NSLog( element)
         }
     }
     
@@ -129,11 +128,11 @@ class ForthViewController: BaseViewController, DataSynchronizeProtocol {
             else {
                 return
             }
-        print("welcome to app")
+        NSLog( "welcome to app")
         
         //2.
         if let _ = myUsername, let _ = myPassword {
-            print("welcome to app 2")
+            NSLog( "welcome to app 2")
         }
     }
     

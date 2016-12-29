@@ -26,6 +26,8 @@ class FirstViewController: BaseViewController,UITableViewDelegate,UITableViewDat
         self.nib = UINib.init(nibName: "CustomCell", bundle: nil)
         self.tableView.estimatedRowHeight = 60;
         self.tableView.rowHeight = UITableViewAutomaticDimension;
+        
+        NSLog( "cccccccc")
     }
     
     override func didReceiveMemoryWarning() {
@@ -44,16 +46,15 @@ class FirstViewController: BaseViewController,UITableViewDelegate,UITableViewDat
         (cell as! CustomCell).closures = {(tmpCell : CustomCell)->Void in
             let row = indexPath.row
             let section = indexPath.section
-            print("indexPath Section:\(section), Row:\(row)")
-            
+            NSLog( "indexPath Section:\(section), Row:\(row)")
             Alamofire.request("https://api.500px.com/v1/photos",method:.get).responseJSON(completionHandler: { response in
-                print(response.request as Any)
-                print(response.response as Any)
-                print(response.data as Any)
-                print(response.result)
+                NSLog( response.request as Any)
+                NSLog( response.response as Any)
+                NSLog( response.data as Any)
+                NSLog( response.result)
                 
                 let json = response.result.value
-                print("JSON: \(json)")
+                NSLog( "JSON: \(json)")
             })
             
 //            NotificationCenter.default.post(name: NSNotification.Name.CustomNotification.DidBegin, object: nil)

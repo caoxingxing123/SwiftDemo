@@ -15,11 +15,11 @@ class SecondViewController: BaseViewController {
         self.title = "第二页面";
         NotificationCenter.default.addObserver(self, selector: #selector(self.doNotification(sender:sender2:)), name: NSNotification.Name.CustomNotification.DidBegin, object: nil)
         
-        
         Alamofire.request(NetworkUnit.test(urlParameter: "")).responseJSON { (response) in
             let json = response.result.value
-            print("\(json)")
+            NSLog( "\(json)")
         }
+        NSLog( 1)
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,7 +28,7 @@ class SecondViewController: BaseViewController {
     }
     
     func doNotification(sender:AnyObject, sender2:AnyObject) {
-        print("1111")
+        NSLog( "1111")
     }
     
     @IBAction func ClickMeAction(_ sender: UIButton) {

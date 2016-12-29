@@ -34,8 +34,7 @@ class DetailViewController: BaseViewController,JXMovableCellTableViewDelegate,JX
         tableView?.snp.makeConstraints({ (make) in
             make.edges.equalToSuperview()
         })
-        
-        print("contentOffSet.y : \(tableView?.contentOffset.y)")
+        NSLog( "contentOffSet.y : \(tableView?.contentOffset.y)")
     }
 
     override func didReceiveMemoryWarning() {
